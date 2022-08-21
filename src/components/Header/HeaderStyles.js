@@ -12,12 +12,12 @@ export default StyleSheet.create({
     marginHorizontal: 20,
   },
   headerContainer: {
-    flex: 0.75,
+    flex: 0.85,
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
   iconContainer: {
-    flex: 0.25,
+    flex: 0.15,
     justifyContent: 'center',
     alignItems: 'center',
   },
