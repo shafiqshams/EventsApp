@@ -5,8 +5,8 @@ export default StyleSheet.create({
   cardWrapper: {
     height: 350,
     width: width - 40,
-    margin: 20,
-    // backgroundColor: 'red',
+    marginHorizontal: 20,
+    marginTop: 20,
   },
   imageContainer: {
     flex: 0.65,
