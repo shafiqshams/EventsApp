@@ -15,5 +15,6 @@ export default StyleSheet.create({
     fontFamily: 'OpenSans-Regular',
     marginLeft: 5,
     textAlign: 'center',
+    textTransform: 'capitalize',
   },
 });
