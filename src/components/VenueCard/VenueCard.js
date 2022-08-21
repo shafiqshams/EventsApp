@@ -1,12 +1,15 @@
 import {View, Text, ImageBackground} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './VenueCardStyles';
 import Highlight from '../Tags/Highlight/Highlight';
 import Demand from '../Tags/Demand/Demand';
+import Favorite from '../Favorite/Favorite';
 
 const imagePath = '../../assets/images/colonge.png';
 
 const VenueCard = () => {
+  const [isFav, setFav] = useState(false);
+
   return (
     <View style={styles.cardWrapper}>
       <ImageBackground
@@ -18,6 +21,9 @@ const VenueCard = () => {
         </View>
         <View style={styles.demandTag}>
           <Demand />
+        </View>
+        <View style={styles.favoriteIcon}>
+          <Favorite isFav={isFav} setFav={setFav} />
         </View>
       </ImageBackground>
     </View>

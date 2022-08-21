@@ -26,4 +26,9 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 2,
   },
+  favoriteIcon: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+  },
 });
