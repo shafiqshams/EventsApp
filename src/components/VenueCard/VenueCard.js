@@ -1,10 +1,10 @@
-import {View, Text, ImageBackground} from 'react-native';
+import {View, ImageBackground} from 'react-native';
 import React, {useState} from 'react';
 import styles from './VenueCardStyles';
 import Highlight from '../Tags/Highlight/Highlight';
 import Demand from '../Tags/Demand/Demand';
 import Favorite from '../Favorite/Favorite';
-
+import InfoCard from '../InfoCard/InfoCard';
 const imagePath = '../../assets/images/colonge.png';
 
 const VenueCard = () => {
@@ -26,6 +26,7 @@ const VenueCard = () => {
           <Favorite isFav={isFav} setFav={setFav} />
         </View>
       </ImageBackground>
+      <InfoCard />
     </View>
   );
 };
