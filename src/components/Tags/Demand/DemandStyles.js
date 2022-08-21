@@ -4,7 +4,7 @@ import colors from '../../../styles/colors';
 export default StyleSheet.create({
   tagWrapper: {
     height: 34,
-    width: 110,
+    width: 112,
     padding: 6,
     borderTopRightRadius: 6,
     borderBottomLeftRadius: 6,
@@ -16,7 +16,7 @@ export default StyleSheet.create({
     color: colors.white,
     fontSize: 16,
     textAlign: 'center',
-    fontFamily: 'OpenSans-SemiBold',
+    fontFamily: 'OpenSans-Bold',
     letterSpacing: 0.2,
   },
 });
