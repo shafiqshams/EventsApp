@@ -5,7 +5,9 @@ const colors = {
   grey01: '#B7B7B7',
   grey02: '#949494',
   grey03: '#c4c4c4',
-  red: '#E50914',
+  red: '#fc4c56',
+  yellow: '#ecc94a',
+  lightblue: '#369bd1',
 };
 
 export default colors;
