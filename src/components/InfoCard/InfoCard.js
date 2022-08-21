@@ -6,18 +6,20 @@ import TourIcon from '../../assets/icons-logo/virtual-tour.svg';
 import colors from '../../styles/colors';
 import InfoBox from '../InfoBox/InfoBox';
 
-const InfoCard = () => {
+const InfoCard = ({info}) => {
   return (
     <View style={styles.infoWrapper}>
       <View style={styles.textContainer}>
-        <Text style={styles.titleStyle}>THE VIEW COLOGNE</Text>
-        <Text style={styles.addressStyle}>50679 Koln, Deutschland</Text>
-        <InfoBox iconType={'user'} data={'10 - 150'} />
-        <InfoBox iconType={'catering'} data={'Partner'} />
+        <Text style={styles.titleStyle}>{info.name}</Text>
+        <Text style={styles.addressStyle}>{info.addressName}</Text>
+        <InfoBox iconType={'user'} data={`${info.min} - ${info.max}`} />
+        <InfoBox iconType={'catering'} data={info.cateringType} />
       </View>
-      <View style={styles.iconContainer}>
-        <TourIcon width={28} height={28} fill={colors.grey02} />
-      </View>
+      {info.tourIcon && (
+        <View style={styles.iconContainer}>
+          <TourIcon width={28} height={28} fill={colors.grey02} />
+        </View>
+      )}
     </View>
   );
 };
