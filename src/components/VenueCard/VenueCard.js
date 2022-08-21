@@ -5,9 +5,24 @@ import Highlight from '../Tags/Highlight/Highlight';
 import Demand from '../Tags/Demand/Demand';
 import Favorite from '../Favorite/Favorite';
 import InfoCard from '../InfoCard/InfoCard';
-const imagePath = '../../assets/images/colonge.png';
+import {getImagePath} from '../../utils/getImagePath';
 
-const VenueCard = () => {
+const VenueCard = ({venue}) => {
+  //Deep object destructuring
+  const {
+    files,
+    subscription: {active},
+    name,
+    address: {address_line: addressName},
+    catering: {type: cateringType},
+    virtual_tour_url: tourIcon,
+    min_pax: min,
+    max_seated,
+    max_standing,
+  } = venue;
+  const max = Math.max(max_seated, max_standing);
+  const imageName = files[0].storage_name;
+
   const [isFav, setFav] = useState(false);
 
   return (
@@ -15,18 +30,26 @@ const VenueCard = () => {
       <ImageBackground
         imageStyle={styles.imageStyle}
         style={styles.imageContainer}
-        source={require(imagePath)}>
-        <View style={styles.highlightTag}>
-          <Highlight />
-        </View>
+        source={{uri: getImagePath(imageName)}}>
+        <View style={styles.highlightTag}>{active && <Highlight />}</View>
         <View style={styles.demandTag}>
+          {/* Always visible for now */}
           <Demand />
         </View>
         <View style={styles.favoriteIcon}>
           <Favorite isFav={isFav} setFav={setFav} />
         </View>
       </ImageBackground>
-      <InfoCard />
+      <InfoCard
+        info={{
+          name,
+          addressName,
+          tourIcon,
+          min,
+          max,
+          cateringType,
+        }}
+      />
     </View>
   );
 };
