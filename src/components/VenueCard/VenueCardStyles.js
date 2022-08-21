@@ -6,7 +6,7 @@ export default StyleSheet.create({
     height: 350,
     width: width - 40,
     margin: 20,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
   },
   imageContainer: {
     flex: 0.65,
@@ -24,7 +24,7 @@ export default StyleSheet.create({
   },
   demandTag: {
     position: 'absolute',
-    bottom: 2,
+    bottom: -7,
   },
   favoriteIcon: {
     position: 'absolute',

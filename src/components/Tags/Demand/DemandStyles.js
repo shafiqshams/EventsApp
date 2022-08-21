@@ -10,7 +10,7 @@ export default StyleSheet.create({
     borderBottomLeftRadius: 6,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.lightblue,
+    backgroundColor: colors.lightblue01,
   },
   textStyle: {
     color: colors.white,

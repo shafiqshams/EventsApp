@@ -3,7 +3,7 @@ import colors from '../../../styles/colors';
 
 export default StyleSheet.create({
   tagWrapper: {
-    height: 32,
+    height: 26,
     width: 76,
     padding: 4,
     borderRadius: 6,
