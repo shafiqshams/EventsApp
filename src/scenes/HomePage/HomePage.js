@@ -1,6 +1,8 @@
 import {View, Text} from 'react-native';
 import React, {useEffect} from 'react';
 import styles from './HomePageStyles';
+import Header from '../../components/Header/Header';
+import VenueCard from '../../components/VenueCard/VenueCard';
 
 const HomePage = ({navigation}) => {
   useEffect(() => {
@@ -9,7 +11,8 @@ const HomePage = ({navigation}) => {
 
   return (
     <View style={styles.mainWrapper}>
-      <Text>Hello Home</Text>
+      <Header />
+      <VenueCard />
     </View>
   );
 };
