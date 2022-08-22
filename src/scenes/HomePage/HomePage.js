@@ -37,22 +37,25 @@ const HomePage = () => {
     return favs;
   };
 
+  const displayVenueCard = ({item}) => {
+    return (
+      <VenueCard
+        isFav={!!favorites.find(favs => favs.id === item.id)}
+        venue={item}
+        setFavItem={addToFavorite}
+        removeFavItem={removeFavorite}
+      />
+    );
+  };
+
   const renderVenues = () => {
     return (
       <FlatList
         data={showFav ? getFavorites() : venues}
-        renderItem={({item}) => (
-          <VenueCard
-            isFav={!!favorites.find(favs => favs.id === item.id)}
-            venue={item}
-            setFavItem={addToFavorite}
-            removeFavItem={removeFavorite}
-          />
-        )}
+        renderItem={displayVenueCard}
         keyExtractor={item => `key-${item.id}`}
         bounces={false}
         showsVerticalScrollIndicator={false}
-        // alwaysBounceVertical={false}
       />
     );
   };
