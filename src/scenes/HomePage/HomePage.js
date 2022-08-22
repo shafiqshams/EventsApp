@@ -1,4 +1,4 @@
-import {SafeAreaView, FlatList} from 'react-native';
+import {SafeAreaView, View, FlatList} from 'react-native';
 import React, {useEffect, useState, useReducer} from 'react';
 import styles from './HomePageStyles';
 import R from 'ramda';
@@ -10,7 +10,8 @@ import useFavorite from '../../hooks/useFavorite';
 
 const HomePage = () => {
   const [venues, setVenues] = useState([]);
-  const [favorites, {setFavItem, removeFavItem, getFavorites}] = useFavorite();
+  const [favorites, {setFavItem, removeFavItem}] = useFavorite();
+  const [showFav, setShowFav] = useState(false);
 
   useEffect(() => {
     const fetchVenues = async () => {
@@ -29,28 +30,37 @@ const HomePage = () => {
     removeFavItem(id);
   };
 
+  const getFavorites = () => {
+    const favs = venues.filter(
+      venue => !!favorites.find(f => f.id === venue.id),
+    );
+    return favs;
+  };
+
+  const renderVenues = () => {
+    return (
+      <FlatList
+        data={showFav ? getFavorites() : venues}
+        renderItem={({item}) => (
+          <VenueCard
+            isFav={!!favorites.find(favs => favs.id === item.id)}
+            venue={item}
+            setFavItem={addToFavorite}
+            removeFavItem={removeFavorite}
+          />
+        )}
+        keyExtractor={item => `key-${item.id}`}
+        bounces={false}
+        showsVerticalScrollIndicator={false}
+        // alwaysBounceVertical={false}
+      />
+    );
+  };
+
   return (
     <SafeAreaView style={styles.mainWrapper}>
-      <Header />
-      {R.isEmpty(venues) ? (
-        <Loader />
-      ) : (
-        <FlatList
-          data={venues}
-          renderItem={({item}) => (
-            <VenueCard
-              isFav={!!favorites.find(favs => favs.id === item.id)}
-              venue={item}
-              setFavItem={addToFavorite}
-              removeFavItem={removeFavorite}
-            />
-          )}
-          keyExtractor={item => `key-${item.id}`}
-          bounces={false}
-          showsVerticalScrollIndicator={false}
-          // alwaysBounceVertical={false}
-        />
-      )}
+      <Header showFav={showFav} onPress={() => setShowFav(value => !value)} />
+      {R.isEmpty(venues) ? <Loader /> : renderVenues()}
     </SafeAreaView>
   );
 };
