@@ -12,7 +12,7 @@ const App = () => {
       <StatusBar
         barStyle="dark-content"
         hidden={false}
-        backgroundColor={colors.black01}
+        backgroundColor={colors.white}
         translucent={true}
       />
 
