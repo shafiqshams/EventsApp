@@ -4,15 +4,14 @@ import styles from './FavoriteStyles';
 import OutlineHeart from '../../assets/icons-logo/outline-heart.svg';
 import FilledHeart from '../../assets/icons-logo/filled-heart.svg';
 import colors from '../../styles/colors';
-
-const Favorite = ({isFav, setFav}) => {
+const Favorite = ({isFav, id, setFavItem, removeFavItem}) => {
   return (
     <TouchableOpacity
       style={[
         styles.iconTouchWrapper,
         isFav ? {backgroundColor: colors.red} : {backgroundColor: colors.white},
       ]}
-      onPress={isFav ? () => setFav(false) : () => setFav(true)}>
+      onPress={isFav ? () => removeFavItem(id) : () => setFavItem(id)}>
       {isFav ? (
         <FilledHeart width={28} height={28} />
       ) : (
