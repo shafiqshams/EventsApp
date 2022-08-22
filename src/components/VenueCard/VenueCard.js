@@ -1,5 +1,5 @@
 import {View, ImageBackground} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './VenueCardStyles';
 import Highlight from '../Tags/Highlight/Highlight';
 import Demand from '../Tags/Demand/Demand';
@@ -7,9 +7,10 @@ import Favorite from '../Favorite/Favorite';
 import InfoCard from '../InfoCard/InfoCard';
 import {getImagePath} from '../../utils/getImagePath';
 
-const VenueCard = ({venue}) => {
+const VenueCard = ({venue, isFav, setFavItem, removeFavItem}) => {
   //Deep object destructuring
   const {
+    id,
     files,
     subscription: {active},
     name,
@@ -23,8 +24,6 @@ const VenueCard = ({venue}) => {
   const max = Math.max(max_seated, max_standing);
   const imageName = files[0].storage_name;
 
-  const [isFav, setFav] = useState(false);
-
   return (
     <View style={styles.cardWrapper}>
       <ImageBackground
@@ -37,7 +36,12 @@ const VenueCard = ({venue}) => {
           <Demand />
         </View>
         <View style={styles.favoriteIcon}>
-          <Favorite isFav={isFav} setFav={setFav} />
+          <Favorite
+            id={id}
+            isFav={isFav}
+            setFavItem={setFavItem}
+            removeFavItem={removeFavItem}
+          />
         </View>
       </ImageBackground>
       <InfoCard
