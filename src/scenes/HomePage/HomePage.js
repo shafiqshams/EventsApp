@@ -1,18 +1,20 @@
-import {SafeAreaView, View, FlatList} from 'react-native';
-import React, {useEffect, useState, useReducer} from 'react';
+import {SafeAreaView, FlatList} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import styles from './HomePageStyles';
 import R from 'ramda';
 import Header from '../../components/Header/Header';
 import VenueCard from '../../components/VenueCard/VenueCard';
 import {getVenues} from '../../services/events/events';
 import Loader from '../../components/Loader/Loader';
-import useFavorite from '../../hooks/useFavorite';
+// import useFavorite from '../../hooks/useFavorite';
 import Empty from '../../components/Empty/Empty';
+import {useFavorite} from '../../context/FavoriteContext';
 
 const HomePage = () => {
   const [venues, setVenues] = useState([]);
-  const [favorites, {setFavItem, removeFavItem}] = useFavorite();
+  // const [favorites, {setFavItem, removeFavItem}] = useFavorite();
   const [showFav, setShowFav] = useState(false);
+  const {favorites} = useFavorite();
 
   useEffect(() => {
     const fetchVenues = async () => {
@@ -23,30 +25,15 @@ const HomePage = () => {
     fetchVenues();
   }, []);
 
-  const addToFavorite = id => {
-    setFavItem(id);
-  };
-
-  const removeFavorite = id => {
-    removeFavItem(id);
-  };
-
   const getFavorites = () => {
     const favs = venues.filter(
-      venue => !!favorites.find(f => f.id === venue.id),
+      venue => !!favorites?.find(f => f.id === venue.id),
     );
     return favs;
   };
 
   const displayVenueCard = ({item}) => {
-    return (
-      <VenueCard
-        isFav={!!favorites.find(favs => favs.id === item.id)}
-        venue={item}
-        setFavItem={addToFavorite}
-        removeFavItem={removeFavorite}
-      />
-    );
+    return <VenueCard venue={item} />;
   };
 
   const renderVenues = () => {
