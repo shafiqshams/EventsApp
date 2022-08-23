@@ -7,7 +7,7 @@ import Favorite from '../Favorite/Favorite';
 import InfoCard from '../InfoCard/InfoCard';
 import {getImagePath} from '../../utils/getImagePath';
 
-const VenueCard = ({venue, isFav, setFavItem, removeFavItem}) => {
+const VenueCard = ({venue}) => {
   //Deep object destructuring
   const {
     id,
@@ -36,12 +36,7 @@ const VenueCard = ({venue, isFav, setFavItem, removeFavItem}) => {
           <Demand />
         </View>
         <View style={styles.favoriteIcon}>
-          <Favorite
-            id={id}
-            isFav={isFav}
-            setFavItem={setFavItem}
-            removeFavItem={removeFavItem}
-          />
+          <Favorite id={id} />
         </View>
       </ImageBackground>
       <InfoCard
