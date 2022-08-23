@@ -4,7 +4,10 @@ import styles from './FavoriteStyles';
 import OutlineHeart from '../../assets/icons-logo/outline-heart.svg';
 import FilledHeart from '../../assets/icons-logo/filled-heart.svg';
 import colors from '../../styles/colors';
-const Favorite = ({isFav, id, setFavItem, removeFavItem}) => {
+import {useFavorite} from '../../context/FavoriteContext';
+const Favorite = ({id}) => {
+  const {favorites, setFavItem, removeFavItem} = useFavorite();
+  const isFav = !!favorites.find(favs => favs.id === id);
   return (
     <TouchableOpacity
       style={[
