@@ -1,18 +1,16 @@
-import {SafeAreaView, FlatList} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import styles from './HomePageStyles';
 import R from 'ramda';
 import Header from '../../components/Header/Header';
-import VenueCard from '../../components/VenueCard/VenueCard';
 import {getVenues} from '../../services/events/events';
 import Loader from '../../components/Loader/Loader';
-// import useFavorite from '../../hooks/useFavorite';
 import Empty from '../../components/Empty/Empty';
 import {useFavorite} from '../../context/FavoriteContext';
+import List from '../../components/List/List';
 
 const HomePage = () => {
   const [venues, setVenues] = useState([]);
-  // const [favorites, {setFavItem, removeFavItem}] = useFavorite();
   const [showFav, setShowFav] = useState(false);
   const {favorites} = useFavorite();
 
@@ -32,21 +30,11 @@ const HomePage = () => {
     return favs;
   };
 
-  const displayVenueCard = ({item}) => {
-    return <VenueCard venue={item} />;
-  };
-
   const renderVenues = () => {
     return (
       <>
         {showFav && R.isEmpty(getFavorites()) && <Empty />}
-        <FlatList
-          data={showFav ? getFavorites() : venues}
-          renderItem={displayVenueCard}
-          keyExtractor={item => `key-${item.id}`}
-          bounces={false}
-          showsVerticalScrollIndicator={false}
-        />
+        <List data={showFav ? getFavorites() : venues} />
       </>
     );
   };
