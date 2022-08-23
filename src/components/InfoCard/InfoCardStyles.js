@@ -14,8 +14,13 @@ export default StyleSheet.create({
   },
   titleStyle: {
     color: colors.black01,
-    fontSize: 22,
     fontFamily: 'OpenSans-Bold',
+  },
+  fontLarge: {
+    fontSize: 20,
+  },
+  fontSmall: {
+    fontSize: 18,
   },
   addressStyle: {
     color: colors.lightblue02,

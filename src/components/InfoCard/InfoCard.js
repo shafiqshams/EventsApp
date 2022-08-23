@@ -7,10 +7,17 @@ import colors from '../../styles/colors';
 import InfoBox from '../InfoBox/InfoBox';
 
 const InfoCard = ({info}) => {
+  const size = info.name.length;
   return (
     <View style={styles.infoWrapper}>
       <View style={styles.textContainer}>
-        <Text style={styles.titleStyle}>{info.name}</Text>
+        <Text
+          style={[
+            styles.titleStyle,
+            size >= 45 ? styles.fontSmall : styles.fontLarge,
+          ]}>
+          {info.name}
+        </Text>
         <Text style={styles.addressStyle}>{info.addressName}</Text>
         <InfoBox iconType={'user'} data={`${info.min} - ${info.max}`} />
         <InfoBox iconType={'catering'} data={info.cateringType} />
