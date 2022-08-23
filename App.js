@@ -3,7 +3,7 @@ import {StatusBar, SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppNavigator} from './src/routes/AppNavigator';
 import colors from './src/styles/colors';
-
+import {FavoriteProvider} from './src/context/FavoriteContext';
 const App = () => {
   return (
     <NavigationContainer>
@@ -15,8 +15,9 @@ const App = () => {
         backgroundColor={colors.white}
         translucent={true}
       />
-
-      <AppNavigator />
+      <FavoriteProvider>
+        <AppNavigator />
+      </FavoriteProvider>
     </NavigationContainer>
   );
 };
