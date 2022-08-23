@@ -7,6 +7,7 @@ import VenueCard from '../../components/VenueCard/VenueCard';
 import {getVenues} from '../../services/events/events';
 import Loader from '../../components/Loader/Loader';
 import useFavorite from '../../hooks/useFavorite';
+import Empty from '../../components/Empty/Empty';
 
 const HomePage = () => {
   const [venues, setVenues] = useState([]);
@@ -50,13 +51,16 @@ const HomePage = () => {
 
   const renderVenues = () => {
     return (
-      <FlatList
-        data={showFav ? getFavorites() : venues}
-        renderItem={displayVenueCard}
-        keyExtractor={item => `key-${item.id}`}
-        bounces={false}
-        showsVerticalScrollIndicator={false}
-      />
+      <>
+        {showFav && R.isEmpty(getFavorites()) && <Empty />}
+        <FlatList
+          data={showFav ? getFavorites() : venues}
+          renderItem={displayVenueCard}
+          keyExtractor={item => `key-${item.id}`}
+          bounces={false}
+          showsVerticalScrollIndicator={false}
+        />
+      </>
     );
   };
 
