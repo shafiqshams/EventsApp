@@ -10,11 +10,12 @@ import {useFavorite} from '../../context/FavoriteContext';
 import List from '../../components/List/List';
 import {useAxios} from '../../hooks/useAxios';
 import Fallback from '../../components/Fallback/Fallback';
+import {useToggle} from '../../hooks/useToggle';
 
 const GET_VENUES = 'venues';
 const HomePage = () => {
   // const [venues, setVenues] = useState([]);
-  const [showFav, setShowFav] = useState(false);
+  const [showFav, toggleFav] = useToggle();
   const {favorites} = useFavorite();
   const {response: venues, isLoading, fetchError} = useAxios(GET_VENUES);
 
@@ -28,7 +29,7 @@ const HomePage = () => {
   const renderVenues = () => {
     return (
       <>
-        {showFav && R.isEmpty(getFavorites()) && <Empty />}
+        {showFav && R.isEmpty(favorites) && <Empty />}
         <List data={showFav ? getFavorites() : venues} />
       </>
     );
@@ -36,7 +37,7 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={styles.mainWrapper}>
-      <Header showFav={showFav} onPress={() => setShowFav(value => !value)} />
+      <Header showFav={showFav} onPress={toggleFav} />
       {isLoading && <Loader />}
       {fetchError ? <Fallback errorMessage={fetchError} /> : renderVenues()}
     </SafeAreaView>
