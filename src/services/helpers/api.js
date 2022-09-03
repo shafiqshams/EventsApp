@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const getFetch = (url, params = {}) => {
   const queryString = Object.entries(params)
     .map(param => {
@@ -14,4 +16,14 @@ export const getFetch = (url, params = {}) => {
   })
     .then(res => res.json())
     .catch(err => console.error(err));
+};
+
+export const getAxios = (url, params = {}) => {
+  return axios
+    .get({
+      url,
+      method: 'GET',
+      params,
+    })
+    .then(res => res.data);
 };
