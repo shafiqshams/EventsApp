@@ -1,11 +1,11 @@
 import {FlatList} from 'react-native';
-import React, {useCallback} from 'react';
+import React from 'react';
 import VenueCard from '../VenueCard/VenueCard';
 
 const List = ({data}) => {
-  const displayVenueCard = useCallback(({item}) => {
+  const displayVenueCard = ({item}) => {
     return <VenueCard venue={item} />;
-  }, []);
+  };
 
   return (
     <FlatList

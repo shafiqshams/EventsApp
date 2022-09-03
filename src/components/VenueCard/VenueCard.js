@@ -53,4 +53,4 @@ const VenueCard = ({venue}) => {
   );
 };
 
-export default VenueCard;
+export default React.memo(VenueCard);
