@@ -8,20 +8,15 @@ import Loader from '../../components/Loader/Loader';
 import Empty from '../../components/Empty/Empty';
 import {useFavorite} from '../../context/FavoriteContext';
 import List from '../../components/List/List';
+import {useAxios} from '../../hooks/useAxios';
+import Fallback from '../../components/Fallback/Fallback';
 
+const GET_VENUES = 'venues';
 const HomePage = () => {
-  const [venues, setVenues] = useState([]);
+  // const [venues, setVenues] = useState([]);
   const [showFav, setShowFav] = useState(false);
   const {favorites} = useFavorite();
-
-  useEffect(() => {
-    const fetchVenues = async () => {
-      const {data} = await getVenues();
-      setVenues(data);
-    };
-
-    fetchVenues();
-  }, []);
+  const {response: venues, isLoading, fetchError} = useAxios(GET_VENUES);
 
   const getFavorites = () => {
     const favs = venues.filter(
@@ -42,7 +37,8 @@ const HomePage = () => {
   return (
     <SafeAreaView style={styles.mainWrapper}>
       <Header showFav={showFav} onPress={() => setShowFav(value => !value)} />
-      {R.isEmpty(venues) ? <Loader /> : renderVenues()}
+      {isLoading && <Loader />}
+      {fetchError ? <Fallback errorMessage={fetchError} /> : renderVenues()}
     </SafeAreaView>
   );
 };
