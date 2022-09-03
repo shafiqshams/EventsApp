@@ -1,6 +1,5 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
-const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   infoWrapper: {
