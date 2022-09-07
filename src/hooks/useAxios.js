@@ -22,7 +22,7 @@ export const useAxios = urlPath => {
       } catch (error) {
         isMounted && setFetchError(error.message);
       } finally {
-        isMounted && setIsLoading(false);
+        setIsLoading(false);
       }
     };
 
