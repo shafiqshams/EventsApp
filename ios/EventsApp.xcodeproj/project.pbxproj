@@ -12,17 +12,18 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2414A77D10874CB684F81102 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D18D836C97B4903ADC1948B /* BebasNeue-Regular.ttf */; };
+		28B0919504424EA0A809F4C7 /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BACD2B226BD4FF7AB7114DC /* BebasNeue-Bold.ttf */; };
+		3E01F4B0DD6248F583076ECD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FDE3D77FB84DF8AA8F974A /* OpenSans-Regular.ttf */; };
+		53183ECF886B48AF8CA1F246 /* ComicSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6714B3548B647EBB282D3E4 /* ComicSans-Italic.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-EventsApp-EventsAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-EventsApp-EventsAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		28B0919504424EA0A809F4C7 /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BACD2B226BD4FF7AB7114DC /* BebasNeue-Bold.ttf */; };
-		2414A77D10874CB684F81102 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D18D836C97B4903ADC1948B /* BebasNeue-Regular.ttf */; };
-		CBCA852B4BD4408EA004DEE8 /* ComicSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B633DAE06A54CE3A4583B39 /* ComicSans-Bold.ttf */; };
-		53183ECF886B48AF8CA1F246 /* ComicSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6714B3548B647EBB282D3E4 /* ComicSans-Italic.ttf */; };
-		CC76522DD998417092CCBAF5 /* ComicSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB4032D1D6744D059897E007 /* ComicSans-Regular.ttf */; };
-		3E01F4B0DD6248F583076ECD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FDE3D77FB84DF8AA8F974A /* OpenSans-Regular.ttf */; };
-		FDF4B9D175DD42C1BDCBB603 /* OpenSans-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C40E9D4296E741818037822B /* OpenSans-RegularItalic.ttf */; };
-		BF132EDA2BC6439496A9B3BF /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EF8D2D77E4944EEB52AC143 /* OpenSans-SemiBold.ttf */; };
+		8A8D319184FB4DFEA37DD943 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48D67F094603452587208E6E /* OpenSans-Bold.ttf */; };
 		A13C5D480DF74374A7DDE109 /* Weast-hood.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CF1CAD256B84461A4D1433A /* Weast-hood.ttf */; };
+		BF132EDA2BC6439496A9B3BF /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EF8D2D77E4944EEB52AC143 /* OpenSans-SemiBold.ttf */; };
+		CBCA852B4BD4408EA004DEE8 /* ComicSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B633DAE06A54CE3A4583B39 /* ComicSans-Bold.ttf */; };
+		CC76522DD998417092CCBAF5 /* ComicSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB4032D1D6744D059897E007 /* ComicSans-Regular.ttf */; };
+		FDF4B9D175DD42C1BDCBB603 /* OpenSans-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C40E9D4296E741818037822B /* OpenSans-RegularItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		00E356EE1AD99517003FC87E /* EventsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* EventsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsAppTests.m; sourceTree = "<group>"; };
+		0EF8D2D77E4944EEB52AC143 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-SemiBold.ttf"; path = "../src/assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* EventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EventsApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = EventsApp/AppDelegate.mm; sourceTree = "<group>"; };
@@ -47,21 +49,21 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EventsApp/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-EventsApp-EventsAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EventsApp-EventsAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-EventsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsApp.debug.xcconfig"; path = "Target Support Files/Pods-EventsApp/Pods-EventsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3D18D836C97B4903ADC1948B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BebasNeue-Regular.ttf"; path = "../src/assets/fonts/BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		48D67F094603452587208E6E /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../src/assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		4B633DAE06A54CE3A4583B39 /* ComicSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ComicSans-Bold.ttf"; path = "../src/assets/fonts/ComicSans-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-EventsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsApp.release.xcconfig"; path = "Target Support Files/Pods-EventsApp/Pods-EventsApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-EventsApp-EventsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsApp-EventsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EventsApp-EventsAppTests/Pods-EventsApp-EventsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-EventsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EventsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EventsApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-EventsApp-EventsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsApp-EventsAppTests.release.xcconfig"; path = "Target Support Files/Pods-EventsApp-EventsAppTests/Pods-EventsApp-EventsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BACD2B226BD4FF7AB7114DC /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BebasNeue-Bold.ttf"; path = "../src/assets/fonts/BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		9CF1CAD256B84461A4D1433A /* Weast-hood.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Weast-hood.ttf"; path = "../src/assets/fonts/Weast-hood.ttf"; sourceTree = "<group>"; };
+		C40E9D4296E741818037822B /* OpenSans-RegularItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-RegularItalic.ttf"; path = "../src/assets/fonts/OpenSans-RegularItalic.ttf"; sourceTree = "<group>"; };
+		DB4032D1D6744D059897E007 /* ComicSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ComicSans-Regular.ttf"; path = "../src/assets/fonts/ComicSans-Regular.ttf"; sourceTree = "<group>"; };
+		E4FDE3D77FB84DF8AA8F974A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E6714B3548B647EBB282D3E4 /* ComicSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ComicSans-Italic.ttf"; path = "../src/assets/fonts/ComicSans-Italic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		8BACD2B226BD4FF7AB7114DC /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; name = "BebasNeue-Bold.ttf"; path = "../src/assets/fonts/BebasNeue-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3D18D836C97B4903ADC1948B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; name = "BebasNeue-Regular.ttf"; path = "../src/assets/fonts/BebasNeue-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4B633DAE06A54CE3A4583B39 /* ComicSans-Bold.ttf */ = {isa = PBXFileReference; name = "ComicSans-Bold.ttf"; path = "../src/assets/fonts/ComicSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E6714B3548B647EBB282D3E4 /* ComicSans-Italic.ttf */ = {isa = PBXFileReference; name = "ComicSans-Italic.ttf"; path = "../src/assets/fonts/ComicSans-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DB4032D1D6744D059897E007 /* ComicSans-Regular.ttf */ = {isa = PBXFileReference; name = "ComicSans-Regular.ttf"; path = "../src/assets/fonts/ComicSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E4FDE3D77FB84DF8AA8F974A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C40E9D4296E741818037822B /* OpenSans-RegularItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-RegularItalic.ttf"; path = "../src/assets/fonts/OpenSans-RegularItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0EF8D2D77E4944EEB52AC143 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBold.ttf"; path = "../src/assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9CF1CAD256B84461A4D1433A /* Weast-hood.ttf */ = {isa = PBXFileReference; name = "Weast-hood.ttf"; path = "../src/assets/fonts/Weast-hood.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +170,7 @@
 			sourceTree = "<group>";
 		};
 		D92DB70284DA4A88AD98CD16 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				8BACD2B226BD4FF7AB7114DC /* BebasNeue-Bold.ttf */,
 				3D18D836C97B4903ADC1948B /* BebasNeue-Regular.ttf */,
@@ -179,10 +181,10 @@
 				C40E9D4296E741818037822B /* OpenSans-RegularItalic.ttf */,
 				0EF8D2D77E4944EEB52AC143 /* OpenSans-SemiBold.ttf */,
 				9CF1CAD256B84461A4D1433A /* Weast-hood.ttf */,
+				48D67F094603452587208E6E /* OpenSans-Bold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -289,6 +291,7 @@
 				FDF4B9D175DD42C1BDCBB603 /* OpenSans-RegularItalic.ttf in Resources */,
 				BF132EDA2BC6439496A9B3BF /* OpenSans-SemiBold.ttf in Resources */,
 				A13C5D480DF74374A7DDE109 /* Weast-hood.ttf in Resources */,
+				8A8D319184FB4DFEA37DD943 /* OpenSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +545,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.eventapp;
 				PRODUCT_NAME = EventsApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -567,7 +570,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.eventapp;
 				PRODUCT_NAME = EventsApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
